@@ -2,9 +2,12 @@
   "name": "gogo-react",
   "version": "3.1.0",
   "description": "Gogo - React Bootstrap 4 Admin Dashboard Template",
+  "homepage": "https://maitungmn.github.io/gogo-admin",
   "scripts": {
     "start": "webpack-dev-server --inline --history-api-fallback --progress --config webpack/dev.js",
-    "build": "webpack --config webpack/prod.js"
+    "build": "webpack --config webpack/prod.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "reactjs"
@@ -48,6 +51,7 @@
     "draft-js": "^0.10.5",
     "firebase": "^5.3.0",
     "formik": "^1.5.1",
+    "gh-pages": "^2.1.1",
     "moment": "2.22.2",
     "rc-slider": "^8.6.1",
     "rc-switch": "^1.6.0",
